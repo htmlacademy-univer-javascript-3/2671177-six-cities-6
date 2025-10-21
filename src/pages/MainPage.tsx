@@ -3,7 +3,7 @@
  * которая отображает секции из макета main.html
  */
 
-import OfferCard, { cardProps } from '../OfferCard';
+import OfferCard, { cardProps } from '../components/OfferCard';
 
 interface MainPageProps {
   cardsCount: number;
