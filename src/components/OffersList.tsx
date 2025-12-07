@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import OfferCard from './OfferCard';
 import { Offer } from '../mocks/offers';
 
@@ -8,6 +8,10 @@ interface OffersListProps {
 
 function OffersList({ offers }: OffersListProps): JSX.Element {
   const [activeCard, setActiveCard] = useState<string | null>(null);
+
+  useEffect(() => {
+    console.log(activeCard);
+  }, [activeCard]);
   
   return (
     <div className="cities__places-list places__list tabs__content">
