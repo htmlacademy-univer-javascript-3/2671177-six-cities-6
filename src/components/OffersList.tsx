@@ -10,15 +10,15 @@ function OffersList({ offers }: OffersListProps): JSX.Element {
   const [activeCard, setActiveCard] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log(activeCard);
+    // Track active card changes
   }, [activeCard]);
-  
+
   return (
     <div className="cities__places-list places__list tabs__content">
       {offers.map((offer) => (
-        <OfferCard 
-          key={offer.id} 
-          offer={offer} 
+        <OfferCard
+          key={offer.id}
+          offer={offer}
           onMouseEnter={() => setActiveCard(offer.id)}
           onMouseLeave={() => setActiveCard(null)}
         />
